@@ -1,0 +1,37 @@
+{
+  "name": "Emprestimo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "emId": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "emDataInicio": {
+      "type": "date",
+      "required": true
+    },
+    "emDataFim": {
+      "type": "date",
+      "required": true
+    },
+    "emDataDevolucao": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "LivroEmprestimo": {
+      "type": "belongsTo",
+      "model": "LivroEmprestimo",
+      "foreignKey": "emId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

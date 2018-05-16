@@ -1,0 +1,11 @@
+{
+  "db": {
+    "host": "unipbiblio.mysql.dbaas.com.br",
+    "port": 3306,
+    "database": "unipbiblio",
+    "password": "Unip123#",
+    "name": "db",
+    "user": "unipbiblio",
+    "connector": "mysql"
+  }
+}

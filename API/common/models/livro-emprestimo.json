@@ -1,0 +1,35 @@
+{
+  "name": "LivroEmprestimo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "lvId": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "emId": {
+      "type": "number",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "livro": {
+      "type": "belongsTo",
+      "model": "Livro",
+      "foreignKey": "lvId"
+    },
+    "emprestimo": {
+      "type": "belongsTo",
+      "model": "Emprestimo",
+      "foreignKey": "emId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

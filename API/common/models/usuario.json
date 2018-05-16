@@ -1,0 +1,40 @@
+{
+  "name": "Usuario",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "usId": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "usNome": {
+      "type": "string",
+      "required": true
+    },
+    "usTelefone": {
+      "type": "string"
+    },
+    "usEmail": {
+      "type": "string",
+      "required": true
+    },
+    "usSenha": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Emprestimo": {
+      "type": "hasMany",
+      "model": "Emprestimo",
+      "foreignKey": "usId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

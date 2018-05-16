@@ -1,0 +1,35 @@
+{
+  "name": "LivroAutor",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "auId": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "lvId": {
+      "type": "number",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "livro": {
+      "type": "belongsTo",
+      "model": "Livro",
+      "foreignKey": "lvId"
+    },
+    "autor": {
+      "type": "belongsTo",
+      "model": "Autor",
+      "foreignKey": "auId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

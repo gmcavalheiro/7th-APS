@@ -1,0 +1,30 @@
+{
+  "name": "Autor",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "auId": {
+      "type": "number",
+      "required": true,
+      "id": true
+    },
+    "auNome": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "LivroAutor": {
+      "type": "hasMany",
+      "model": "Livro",
+      "foreignKey": "auId",
+      "through": "LivroAutor"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

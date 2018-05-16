@@ -1,0 +1,43 @@
+{
+  "name": "Livro",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "lvId": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "lvTitulo": {
+      "type": "string",
+      "required": true
+    },
+    "lvQuantidade": {
+      "type": "number",
+      "required": true
+    },
+    "lvFoto": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "LivroAutor": {
+      "type": "hasMany",
+      "model": "Autor",
+      "foreignKey": "lvId",
+      "through": "LivroAutor"
+    },
+    "LivroEmprestimo": {
+      "type": "hasMany",
+      "model": "Emprestimo",
+      "foreignKey": "lvId",
+      "through": "LivroEmprestimo"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
