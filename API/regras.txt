@@ -1,0 +1,11 @@
+O endpoint responsável por realizar um empréstimo deverá ter uma validação caso um determinado livro tenha sido emprestado por outro usuário. Verifique a data de Devolução do Livro
+
+Ao realizar a inserção de um livro, permitir a gravação da foto no campo lvFoto com uma estrutura Base64. Adicionar uma regra onde a foto deverá ter um tamanho máximo de 300x300 de resolução e 100Kb de tamanho.
+
+Todos os serviços deverão ter um hash em base64 enviado no cabeçalho de segurança de toda requisição. Ao tentar acessar estes end-points, o middleware de segurança deverá validar se temos autorização para acessar os serviços ou não.
+
+Criar uma regra no serviço de login que deverá verificar se o usuário e senha são válidos. Caso as tentativas persistam por mais de 3x, o usuário deverá ser bloqueado temporariamente.
+
+Não permitir a exclusão de um empréstimo, caso o livro esteja com periodo em aberto de empréstimo.
+
+Atentem-se com as exclusões das tabelas que possuem relacionamentos, analisar a possibilidade de exclusão em cascata ou não em cada entidade.
